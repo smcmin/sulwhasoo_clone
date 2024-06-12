@@ -3,3 +3,90 @@
 /* font */
 /* noto sans */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR';
+}
+select {
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  body {
+    background-color: #ddd;
+  }
+
+/* 헤더 header */
+.header-inner {
+    padding: 15px 80px;
+    border: 1px solid red;
+    width: 100%;
+    color: #fff;
+}
+.header-inner .top-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+}
+.language {
+    color: #fff;
+    background-color: transparent;
+}
+.language option {
+    color: #000;
+}
+.header-logo {
+    width: 166px;
+    height: 40px;
+}
+.search-inner ul {
+    display: flex;
+}
+.search-inner ul li {
+    margin: 0 10px;
+    position: relative;
+}
+.header-inner ul li a {
+    color: #fff;
+
+}
+.search-inner ul li:first-of-type:after {
+
+    display: none;
+}
+.search-inner ul li::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: -10px;
+    position: absolute;
+}
+.header-inner .bottom-inner {
+    max-width: 1100px;
+    text-align: center;
+    padding: 40px 80px;
+    margin: auto;
+}
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+}
+.sub-header-ul {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    display: none;
+}
+.header-about ul {
+    display: none;
+}

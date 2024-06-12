@@ -1,0 +1,47 @@
+.inner
+	section.header-slide
+		header
+			.header-inner
+				.top-inner
+					.language-inner
+						select.language
+							option
+						img.btn-down
+					img.logo
+					.search-inner
+						ul
+							li*3 / 3*li>img.search
+				.bottom-inner
+					ul.menu-list>li*9
+		.slide-wrapper
+			.slide*6
+	section.recommend
+		.recommend-desc
+			h1.title
+			p.desc
+			a.btn-more
+	section.best
+		.best-inner
+			h1.title
+			a.btn-more
+	section.season-items
+		.season-inner
+			.season-item*3
+				h3
+				p.desc-sub
+				p.price
+	section.link
+		.link-item*2
+				img.more-img
+					h1.title
+					a.btn-more
+	footer
+		.top-inner
+			ul.login-inner>li*7
+			ul.sns>li*5
+		.bottom-inner
+			p.time
+			p.copyright
+	
+	button.btn-top
+		img

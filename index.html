@@ -1,14 +1,217 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- js -->
     <title>설화수 클론코딩</title>
-</head>
-<body>
-    <h1>안녕</h1>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <div class="inner">
+      <!-- 헤더 및 슬라이드-->
+      <section class="header-slide">
+        <!-- 헤더 -->
+        <header>
+          <div class="header-inner">
+            <div class="top-inner">
+              <div class="language-inner">
+                <select name="language" class="language" id="">
+                  <option value="한국/한국어">한국/한국어</option>
+                  <option value="USA/ENGLISH">USA/ENGLISH</option>
+                </select>
+                <img
+                  src="img/arrow-small.png"
+                  alt="화살표이미지"
+                  class="btn-down"
+                />
+              </div>
+              <img
+                class="header-logo"
+                src="img/logo-white.png"
+                alt="로고"
+                class="logo"
+              />
+              <div class="search-inner">
+                <ul>
+                  <li><a href="#none">매장찾기</a></li>
+                  <li><a href="#none">구매하기</a></li>
+                  <li>
+                    <img
+                      class="search"
+                      src="img/search-white.png"
+                      alt="돋보기 서치이미지"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="bottom-inner">
+              <ul class="menu-list">
+                <li><a href="#none">윤조</a></li>
+                <li><a href="#none">자음생</a></li>
+                <li><a href="#none">진설</a></li>
+                <li><a href="#none">기프트</a></li>
+                <li><a href="#none">베스트 셀러</a></li>
+                <li>
+                  <a href="#none">제품</a>
+                  <ul class="sub-header-ul">
+                    <li class="sub-header-li"><a href="#none">스킨케어</a></li>
+                    <li class="sub-header-li"><a href="#none">메이크업</a></li>
+                    <li class="sub-header-li"><a href="#none">남성</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#none">스파</a>
+                  <ul class="sub-header-ul">
+                    <li class="sub-header-li"><a href="#none">스파</a></li>
+                    <li class="sub-header-li">
+                      <a href="#none">스파 프로그램</a>
+                    </li>
+                    <li class="sub-header-li"><a href="#none">예약</a></li>
+                    <li class="sub-header-li"><a href="#none">매장 찾기</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#none">플래그십 스토어</a>
+                  <ul class="sub-header-ul">
+                    <li class="sub-header-li">
+                      <a href="#none">플래그십 스토어</a>
+                    </li>
+                    <li class="sub-header-li">
+                      <a href="#none">설화수 북촌</a>
+                    </li>
+                    <li class="sub-header-li">
+                      <a href="#none">설화수 도산</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#none">ABOUT 설화수</a>
+                  <!-- about 설화수 -->
+                  <div class="header-about">
+                    <ul>
+                      <li><strong><a href="#none">브랜드 스토리</a></strong></li>
+                      <li><a href="#none">브랜드 빌리프</a></li>
+                      <li><a href="#none">브랜드 캠페인</a></li>
+                      <li><a href="#none">브랜드 지속가능성</a></li>
+                      <li><a href="#none">브랜드 뉴스</a></li>
+                    </ul>
+                    <ul>
+                      <li><strong><a href="#none">브랜드 앰버서더</a></strong></li>
+                    </ul>
+                    <ul>
+                      <li><strong><a href="#none">로제</a></strong></li>
+                      <li>
+                        <a href="#none">PART 1 SULWHASOO REBLOOM</a>
+                        </li>
+                      <li>
+                        <a href="#none">PART 2 ROSÉ IN BUKCHON</a>
+                        </li>
+                    </ul>
+                    <ul>
+                      <li><strong><a href="#none">ART</a></strong></li>
+                      <li><a href="#none">설화 문화전</a></li>
+                    </ul>
+                    <ul>
+                      <li><strong><a href="#none">HERITAGE</a></strong></li>
+                      <li><a href="#none">SINCE 1932</a></li>
+                      <li><a href="#none">명작 컬렉션</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <!-- 슬라이드 -->
+        <div class="slide-wrapper">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+      </section>
 
-</body>
+      <!-- recommend -->
+      <section class="recommend">
+        <div class="recommend-desc">
+          <h1 class="title"></h1>
+          <p class="desc"></p>
+          <a href="" class="btn-more"></a>
+        </div>
+      </section>
+
+      <!-- best -->
+      <section class="best">
+        <div class="best-inner">
+          <h1 class="title"></h1>
+          <a href="" class="btn-more"></a>
+        </div>
+      </section>
+
+      <!-- season-items -->
+      <section class="season-items">
+        <div class="season-inner">
+          <div class="season-item">
+            <h3></h3>
+            <p class="desc-sub"></p>
+            <p class="price"></p>
+          </div>
+          <div class="season-item">
+            <h3></h3>
+            <p class="desc-sub"></p>
+            <p class="price"></p>
+          </div>
+          <div class="season-item">
+            <h3></h3>
+            <p class="desc-sub"></p>
+            <p class="price"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- links -->
+      <section class="link">
+        <div class="link-item">
+          <img src="" alt="" class="more-img" />
+          <h1 class="title"></h1>
+          <a href="" class="btn-more"></a>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer>
+        <div class="top-inner">
+          <ul class="login-inner">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="sns">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="bottom-inner">
+          <p class="time"></p>
+          <p class="copyright"></p>
+        </div>
+      </footer>
+
+      <!-- go to the top -->
+      <button class="btn-top">
+        <img src="" alt="" />
+      </button>
+    </div>
+  </body>
 </html>
