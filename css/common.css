@@ -20,15 +20,25 @@ select {
   }
 
   body {
+    position: relative;
     background-color: #ddd;
   }
 
 /* 헤더 header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
 .header-inner {
     padding: 15px 80px;
     border: 1px solid red;
     width: 100%;
     color: #fff;
+    /* display: fixed; */
+    /* top: 0; */
 }
 .header-inner .top-inner {
     display: flex;
@@ -90,3 +100,55 @@ select {
 .header-about ul {
     display: none;
 }
+
+/* slide  */
+.swiper-slide img {
+    width: 100%;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+   display: none;
+}
+.swiper-button-next,
+.swiper-button-next, .swiper-rtl .swiper-button-prev,
+.swiper-button-next {
+    background: url(../img/slide-arrow-next.png) right center no-repeat;
+    width: 68px;
+    height: 68px;
+}
+.swiper-slider  {
+    position: relative;
+}
+.slide-desc-inner {
+    position: absolute;
+    bottom: 200px;
+    left: 200px;  
+    color: #fff;  
+    font-family: 'Noto Sans KR';
+
+}
+.slide-desc-inner .slide-desc {
+    font-size: 18px;
+}
+.slide-desc-inner h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.swiper-slide:nth-of-type(2) .slide-desc-inner,
+.swiper-slide:nth-of-type(4) .slide-desc-inner {
+    color: #222;
+}
+.swiper-pagination {
+    width: 422px;
+    height: 6px;
+  }
+  
+  .swiper-pagination-bullet {
+    width: calc(100% / 3);
+    margin: 0;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 0;
+    background-color: none;
+  }

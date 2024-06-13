@@ -6,6 +6,14 @@
     <!-- js -->
     <title>설화수 클론코딩</title>
     <link rel="stylesheet" href="css/common.css" />
+
+    <!-- swiper slide -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="inner">
@@ -91,30 +99,40 @@
                   <!-- about 설화수 -->
                   <div class="header-about">
                     <ul>
-                      <li><strong><a href="#none">브랜드 스토리</a></strong></li>
+                      <li>
+                        <strong><a href="#none">브랜드 스토리</a></strong>
+                      </li>
                       <li><a href="#none">브랜드 빌리프</a></li>
                       <li><a href="#none">브랜드 캠페인</a></li>
                       <li><a href="#none">브랜드 지속가능성</a></li>
                       <li><a href="#none">브랜드 뉴스</a></li>
                     </ul>
                     <ul>
-                      <li><strong><a href="#none">브랜드 앰버서더</a></strong></li>
+                      <li>
+                        <strong><a href="#none">브랜드 앰버서더</a></strong>
+                      </li>
                     </ul>
                     <ul>
-                      <li><strong><a href="#none">로제</a></strong></li>
+                      <li>
+                        <strong><a href="#none">로제</a></strong>
+                      </li>
                       <li>
                         <a href="#none">PART 1 SULWHASOO REBLOOM</a>
-                        </li>
+                      </li>
                       <li>
                         <a href="#none">PART 2 ROSÉ IN BUKCHON</a>
-                        </li>
+                      </li>
                     </ul>
                     <ul>
-                      <li><strong><a href="#none">ART</a></strong></li>
+                      <li>
+                        <strong><a href="#none">ART</a></strong>
+                      </li>
                       <li><a href="#none">설화 문화전</a></li>
                     </ul>
                     <ul>
-                      <li><strong><a href="#none">HERITAGE</a></strong></li>
+                      <li>
+                        <strong><a href="#none">HERITAGE</a></strong>
+                      </li>
                       <li><a href="#none">SINCE 1932</a></li>
                       <li><a href="#none">명작 컬렉션</a></li>
                     </ul>
@@ -125,13 +143,48 @@
           </div>
         </header>
         <!-- 슬라이드 -->
-        <div class="slide-wrapper">
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/slide01.jpg" alt="슬라이드이미지" />
+              <div class="slide-desc-inner">
+                <p class="slide-desc">
+                  10만개의 인삼 캡슐을 담아 피부 기둥을 세우다
+                </p>
+                <h1 class="slide-title">자음생세럼</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slide02.jpg" alt="슬라이드이미지" />
+              <div class="slide-desc-inner">
+                <p class="slide-desc">
+                  SUMMER WITH SULWHASOO
+                </p>
+                <h1 class="slide-title">지치지 않는 여름 피부</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slide03.jpg" alt="슬라이드이미지" />
+              <div class="slide-desc-inner">
+                <p class="slide-desc">
+                    The Altimate S
+                </p>
+                <h1 class="slide-title">진설라인</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/slide04.jpg" alt="슬라이드이미지" />
+              <div class="slide-desc-inner">
+                <p class="slide-desc">
+                    Amore Mall(6.10-6.23)
+                </p>
+                <h1 class="slide-title">설화수 최대 32% OFF</h1>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -212,6 +265,27 @@
       <button class="btn-top">
         <img src="" alt="" />
       </button>
+
+      <!-- swiper slide -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          effect: "fade",
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
     </div>
   </body>
 </html>
