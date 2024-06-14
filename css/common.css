@@ -19,6 +19,12 @@ select {
     text-decoration: none;
   }
 
+  .recommend, .best, .season-items, .links {
+    width: 1460px;
+    font-family: 'Noto Sans KR';
+    margin: 0 auto;
+  }
+
   body {
     position: relative;
     background-color: #ddd;
@@ -109,12 +115,19 @@ header {
 .swiper-button-prev:after {
    display: none;
 }
-.swiper-button-next,
-.swiper-button-next, .swiper-rtl .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next.slider-next,
+.swiper-button-prev.slider-prev {
     background: url(../img/slide-arrow-next.png) right center no-repeat;
     width: 68px;
     height: 68px;
+    background-color: #ffffff7e;
+    right: 0;
+}
+.swiper-button-prev.slider-prev {
+    background: url(../img/slide-arrow-prev.png) right center no-repeat;
+    left: 0;
+    background-color: #ffffff7e;
+
 }
 .swiper-slider  {
     position: relative;
@@ -139,16 +152,50 @@ header {
 .swiper-slide:nth-of-type(4) .slide-desc-inner {
     color: #222;
 }
-.swiper-pagination {
-    width: 422px;
+.swiper-pagination.slider-page {
+    width: 422px !important;
     height: 6px;
+    bottom: 200px;
+    position: absolute;
   }
   
   .swiper-pagination-bullet {
-    width: calc(100% / 3);
-    margin: 0;
-    line-height: 40px;
-    height: 40px;
-    border-radius: 0;
-    background-color: none;
+   display: none;
+  }
+
+  h1.title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+
+  /* recommend */
+  .recommend {
+    margin-top: 120px;
+    text-align: center;
+    border: 1px solid red;
+  }
+  .recommend h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  .recommend .desc {
+    font-size: 15px;
+    color: #6f6f6f;
+    margin: 10px 0 20px;
+  }
+  .recommend .price {
+    font-size: 15px;
+  }
+  .recommend img {
+    width: 464px;
+  }
+  .recommend h1 {
+    text-align: left;
+  }
+  .recommend-next,
+  .recommend-prev {
+    top: 50%;
+    transform: translateY(-50%);
   }

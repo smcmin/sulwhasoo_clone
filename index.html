@@ -157,43 +157,78 @@
             <div class="swiper-slide">
               <img src="img/slide02.jpg" alt="슬라이드이미지" />
               <div class="slide-desc-inner">
-                <p class="slide-desc">
-                  SUMMER WITH SULWHASOO
-                </p>
+                <p class="slide-desc">SUMMER WITH SULWHASOO</p>
                 <h1 class="slide-title">지치지 않는 여름 피부</h1>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="img/slide03.jpg" alt="슬라이드이미지" />
               <div class="slide-desc-inner">
-                <p class="slide-desc">
-                    The Altimate S
-                </p>
+                <p class="slide-desc">The Altimate S</p>
                 <h1 class="slide-title">진설라인</h1>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="img/slide04.jpg" alt="슬라이드이미지" />
               <div class="slide-desc-inner">
-                <p class="slide-desc">
-                    Amore Mall(6.10-6.23)
-                </p>
+                <p class="slide-desc">Amore Mall(6.10-6.23)</p>
                 <h1 class="slide-title">설화수 최대 32% OFF</h1>
               </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next slider-next"></div>
+          <div class="swiper-button-prev slider-prev"></div>
+          <div class="swiper-pagination slider-page"></div>
         </div>
       </section>
 
       <!-- recommend -->
       <section class="recommend">
         <div class="recommend-desc">
-          <h1 class="title"></h1>
-          <p class="desc"></p>
-          <a href="" class="btn-more"></a>
+          <h1 class="title">설화수 추천</h1>
+          <div class="recommend-item swiper mySwiper-recommend">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/item01.jpg" alt="상품 이미지" />
+                <h4>자음생세럼</h4>
+                <p class="desc">Concentrated Ginseng Renewing Serum EX</p>
+                <p class="price">145,000원</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/item02.jpg" alt="상품 이미지" />
+                <h4>탄력크림</h4>
+                <p class="desc">Essential Comfort Firming Cream</p>
+                <p class="price">120,000원</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/item03.jpg" alt="상품 이미지" />
+                <h4>퍼펙팅 립컬러</h4>
+                <p class="desc">Perfecting Lip Color</p>
+                <p class="price">45,000원</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/item04.jpg" alt="상품 이미지" />
+                <h4>진설크림</h4>
+                <p class="desc">The Ultimate S Cream</p>
+                <p class="price">520,000원</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/item05.jpg" alt="상품 이미지" />
+                <h4>옥용팩</h4>
+                <p class="desc">Clarifying Mask</p>
+                <p class="price">53,000원</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/item06.jpg" alt="상품 이미지" />
+                <h4>순행클렌징폼</h4>
+                <p class="desc">Gentle Cleansing Foam</p>
+                <p class="price">42,000원</p>
+              </div>
+            </div>
+            <div class="swiper-button-next slider-next recommend-next"></div>
+            <div class="swiper-button-prev slider-prev recommend-prev"></div>
+            <div class="swiper-pagination slider-page"></div>
+          </div>
         </div>
       </section>
 
@@ -266,12 +301,31 @@
         <img src="" alt="" />
       </button>
 
-      <!-- swiper slide -->
       <script>
+        // swiper slide
         var swiper = new Swiper(".mySwiper", {
           spaceBetween: 30,
           centeredSlides: true,
           effect: "fade",
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+
+        // swiper slide recommend
+        var swiper = new Swiper(".mySwiper-recommend", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          slidesPerView: 3,
           autoplay: {
             delay: 2500,
             disableOnInteraction: false,
