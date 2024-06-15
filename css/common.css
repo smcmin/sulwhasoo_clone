@@ -20,7 +20,7 @@ select {
   }
 
   .recommend, .best, .season-items, .links {
-    width: 1460px;
+    width: 1440px;
     font-family: 'Noto Sans KR';
     margin: 0 auto;
   }
@@ -166,6 +166,7 @@ header {
   h1.title {
     font-size: 28px;
     margin-bottom: 30px;
+    font-weight: 500;
   }
 
 
@@ -199,3 +200,46 @@ header {
     top: 50%;
     transform: translateY(-50%);
   }
+  
+  /* best */
+  .best {
+    margin-top: 120px;
+    position: relative;
+  }
+  .best-desc-inner {
+    position: absolute;
+    bottom: 100px;
+    left: 160px;
+  }
+  .best-desc-inner .desc {
+    font-size: 18px;
+    color: #6f6f6f;
+  }
+  .best-desc-inner a {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+
+  /* season item  */
+  .season-inner {
+    margin-top: 120px;
+  }
+  .season-item-inner {
+    display: flex;
+    gap: 30px;
+  }
+  .season-item img {
+    height: 542px;
+  }
+  .season-item:first-of-type img,
+  .season-item:nth-of-type(3) img  {
+    width: 342px;
+  }
+  .season-item:nth-of-type(2) img {
+    width: 708px;
+  }
+  
