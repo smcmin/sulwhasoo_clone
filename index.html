@@ -24,7 +24,7 @@
           <div class="header-inner">
             <div class="top-inner">
               <div class="language-inner">
-                <select name="language" class="language" id="">
+                <select name="language" class="language" id="language">
                   <option value="한국/한국어">한국/한국어</option>
                   <option value="USA/ENGLISH">USA/ENGLISH</option>
                 </select>
@@ -55,7 +55,7 @@
               </div>
             </div>
             <div class="bottom-inner">
-              <ul class="menu-list">
+              <ul class="menu-list depth-1">
                 <li><a href="#none">윤조</a></li>
                 <li><a href="#none">자음생</a></li>
                 <li><a href="#none">진설</a></li>
@@ -63,7 +63,7 @@
                 <li><a href="#none">베스트 셀러</a></li>
                 <li>
                   <a href="#none">제품</a>
-                  <ul class="sub-header-ul">
+                  <ul class="sub-header-ul depth-2">
                     <li class="sub-header-li"><a href="#none">스킨케어</a></li>
                     <li class="sub-header-li"><a href="#none">메이크업</a></li>
                     <li class="sub-header-li"><a href="#none">남성</a></li>
@@ -71,7 +71,7 @@
                 </li>
                 <li>
                   <a href="#none">스파</a>
-                  <ul class="sub-header-ul">
+                  <ul class="sub-header-ul depth-2">
                     <li class="sub-header-li"><a href="#none">스파</a></li>
                     <li class="sub-header-li">
                       <a href="#none">스파 프로그램</a>
@@ -82,7 +82,7 @@
                 </li>
                 <li>
                   <a href="#none">플래그십 스토어</a>
-                  <ul class="sub-header-ul">
+                  <ul class="sub-header-ul depth-2">
                     <li class="sub-header-li">
                       <a href="#none">플래그십 스토어</a>
                     </li>
@@ -98,14 +98,14 @@
                   <a href="#none">ABOUT 설화수</a>
                   <!-- about 설화수 -->
                   <div class="header-about">
-                    <ul>
-                      <li>
+                    <ul class="depth-2">
+                      <li class="sub-header-li">
                         <strong><a href="#none">브랜드 스토리</a></strong>
                       </li>
-                      <li><a href="#none">브랜드 빌리프</a></li>
-                      <li><a href="#none">브랜드 캠페인</a></li>
-                      <li><a href="#none">브랜드 지속가능성</a></li>
-                      <li><a href="#none">브랜드 뉴스</a></li>
+                      <li class="sub-header-li"><a href="#none">브랜드 빌리프</a></li>
+                      <li class="sub-header-li"><a href="#none">브랜드 캠페인</a></li>
+                      <li class="sub-header-li"><a href="#none">브랜드 지속가능성</a></li>
+                      <li class="sub-header-li"><a href="#none">브랜드 뉴스</a></li>
                     </ul>
                     <ul>
                       <li>
@@ -253,26 +253,26 @@
           <div class="season-item-inner">
             <div class="season-item">
               <img src="img/best-img01.jpg" alt="상품 이미지" />
-              <div class="season-item">
-                <h3></h3>
-                <p class="desc-sub"></p>
-                <p class="price"></p>
+              <div class="season-item-desc">
+                <h3>윤조에센스 6세대</h3>
+                <p class="desc-sub">First Care Activating Serum VI</p>
+                <p class="price">140,000원</p>
               </div>
             </div>
             <div class="season-item">
               <img src="img/best-img02.jpg" alt="상품 이미지" />
-              <div class="season-item">
-                <h3></h3>
-                <p class="desc-sub"></p>
-                <p class="price"></p>
+              <div class="season-item-desc">
+                <h3>윤조에센스로 시작하는</h3>
+                <p class="desc-sub">여름 스킨케어</p>
+                <!-- <p class="price">140,000원</p> -->
               </div>
             </div>
             <div class="season-item">
               <img src="img/best-img03.jpg" alt="상품 이미지" />
-              <div class="season-item">
-                <h3></h3>
-                <p class="desc-sub"></p>
-                <p class="price"></p>
+              <div class="season-item-desc">
+                <h3>윤조마스크</h3>
+                <p class="desc-sub">Fist Care Activating Maks</p>
+                <p class="price">60,000원</p>
               </div>
             </div>
           </div>
@@ -282,9 +282,22 @@
       <!-- links -->
       <section class="link">
         <div class="link-item">
-          <img src="" alt="" class="more-img" />
-          <h1 class="title"></h1>
-          <a href="" class="btn-more"></a>
+          <div class="link-item-inner">
+            <a href="#">
+              <img src="img/link-img01.jpg" alt="" class="more-img" />
+              <h1 class="title">설화수 북촌 플래그십 스토어</h1>
+              <a href="#" class="btn-more">자세히 보기</a>
+            </a>
+          </div>
+        </div>
+        <div class="link-item">
+          <div class="link-item-inner">
+            <a href="#">
+              <img src="img/link-img02.jpg" alt="" class="more-img" />
+              <h1 class="title">설화수 도산 플래그십 스토어</h1>
+              <a href="#" class="btn-more">자세히 보기</a>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -292,25 +305,43 @@
       <footer>
         <div class="top-inner">
           <ul class="login-inner">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>회사소개</li>
+            <li>서비스이용약관</li>
+            <li>UGC 이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>영상정보처리방침</li>
+            <li>사이트맵</li>
+            <li>로그인</li>
           </ul>
           <ul class="sns">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <img
+                src="img/web_accessibility_certification_mark_kr_240126.png"
+                alt="wa이미지"
+              />
+            </li>
+            <li>
+              <img src="img/facebookLogo.png" alt="sns img" />
+            </li>
+            <li>
+              <img src="img/instaLogo.png" alt="sns img" />
+            </li>
+            <li>
+              <img src="img/youtubeLogo.png" alt="sns img" />
+            </li>
+            <li>
+              <img src="img/kakaoChannelLogo.png" alt="sns img" />
+            </li>
           </ul>
         </div>
         <div class="bottom-inner">
-          <p class="time"></p>
-          <p class="copyright"></p>
+          <p class="time">
+            고객서비스센터(수신자요금부담) : 080-023-5454 (월~금: AM 09:00~PM
+            06:00)
+          </p>
+          <p class="copyright">
+            © AMOREPACIFIC CORPORATION. All rights reserved.
+          </p>
         </div>
       </footer>
 

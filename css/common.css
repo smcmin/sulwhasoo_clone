@@ -19,7 +19,7 @@ select {
     text-decoration: none;
   }
 
-  .recommend, .best, .season-items, .links {
+  .recommend, .best, .season-items, .link {
     width: 1440px;
     font-family: 'Noto Sans KR';
     margin: 0 auto;
@@ -27,7 +27,7 @@ select {
 
   body {
     position: relative;
-    background-color: #ddd;
+    background-color: #fff;
   }
 
 /* 헤더 header */
@@ -37,6 +37,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 100;
+    transition: 0.3s;
 }
 .header-inner {
     padding: 15px 80px;
@@ -72,6 +73,7 @@ header {
 }
 .header-inner ul li a {
     color: #fff;
+    font-family: 'Noto sans KR';
 
 }
 .search-inner ul li:first-of-type:after {
@@ -101,11 +103,41 @@ header {
     border: 1px solid red;
     width: 100%;
     display: flex;
-    display: none;
+    /* display: none; */
 }
-.header-about ul {
-    display: none;
+/* header hover */
+header:hover {
+  background-color: #fff;
+  color: #666;
 }
+header:hover .top-inner a,
+header:hover .bottom-inner a,
+header:hover .language {
+  color: #666;
+}
+/* header depth2 */
+.depth-1 {
+  position: relative;
+}
+.depth-2 {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 20px;
+}
+/* header sub-header 위치잡기 */
+.sub-header-ul {
+  /* overflow: hidden; */
+}
+header .sub-header-li {
+  left: 50%;
+  position: absolute;
+}
+header .sub-header-ul:nth-of-type(1) {
+  left: 9%;
+}
+
+
 
 /* slide  */
 .swiper-slide img {
@@ -170,6 +202,7 @@ header {
   }
 
 
+
   /* recommend */
   .recommend {
     margin-top: 120px;
@@ -197,8 +230,7 @@ header {
   }
   .recommend-next,
   .recommend-prev {
-    top: 50%;
-    transform: translateY(-50%);
+   -16px: 50%;
   }
   
   /* best */
@@ -214,13 +246,14 @@ header {
   .best-desc-inner .desc {
     font-size: 18px;
     color: #6f6f6f;
+    margin-bottom: 20px;
   }
-  .best-desc-inner a {
+  .btn-more {
     padding: 10px 20px;
     border: 1px solid #000;
     font-size: 15px;
     display: inline-block;
-    margin-top: 20px;
+    color: #000;
   }
 
 
@@ -242,4 +275,110 @@ header {
   .season-item:nth-of-type(2) img {
     width: 708px;
   }
+  .season-item h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .season-item .desc-sub {
+    font-size: 16px;
+    color: #6f6f6f;
+    margin: 20px 0 10px;
+  }
+
+  .season-item {
+    position: relative;
+  }
+  .season-inner .season-item-desc {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    text-align: center;
+  }
   
+  .season-item:nth-of-type(2) .season-item-desc {
+    text-align: left;
+    left: 200px;
+    bottom: 60px;
+  }
+
+  /* link */
+  .link {
+    margin-top: 120px;
+    display: flex;
+    gap: 50px;
+  }
+  .link-item-inner h1 {
+    margin-top: 30px;
+  }
+  .link-item-inner {
+    text-align: center;
+  }
+  .link a {
+    color: #000;
+  }
+
+  /* footer */
+  footer {
+    /* max-width: 1200px; */
+    /* padding: 0 50px; */
+    margin: 0 auto;
+    margin-top: 120px;
+    background-color: #fff;
+    color: #222;
+  }
+  footer .top-inner, .login-inner, .sns {
+    display: flex;
+  }
+  footer .top-inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .login-inner li {
+    margin-right: 30px;
+    position: relative;
+  }
+  .login-inner li::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #222;
+    position: absolute;
+    right: -16px;
+    top: 0;
+  }
+  .login-inner li:last-of-type:after {
+    content: '';
+    display: none;
+  }
+  .sns img:first-of-type{
+    width: 42px;
+  }
+  .sns {
+    align-items: center;
+  }
+  footer .bottom-inner .time {
+    margin: 20px 0;
+  }
+  footer .top-inner,
+  footer .bottom-inner {
+    position: relative;
+    padding: 0 210px;
+
+  }
+  footer .top-inner::before,
+  footer .bottom-inner::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #dedede79;
+    top: -20px;
+    left: 0;
+    position: absolute;
+    /* padding: 0 -1460px !important; */
+  }
+  footer .login-inner li:hover {
+    text-decoration: underline;
+  }
