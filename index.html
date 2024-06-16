@@ -7,12 +7,19 @@
     <title>설화수 클론코딩</title>
     <link rel="stylesheet" href="css/common.css" />
 
+    <!-- jquer cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- swiper slide -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -61,7 +68,7 @@
                 <li><a href="#none">진설</a></li>
                 <li><a href="#none">기프트</a></li>
                 <li><a href="#none">베스트 셀러</a></li>
-                <li>
+                <li class="depth-1-item header-product">
                   <a href="#none">제품</a>
                   <ul class="sub-header-ul depth-2">
                     <li class="sub-header-li"><a href="#none">스킨케어</a></li>
@@ -69,7 +76,7 @@
                     <li class="sub-header-li"><a href="#none">남성</a></li>
                   </ul>
                 </li>
-                <li>
+                <li class="depth-1-item">
                   <a href="#none">스파</a>
                   <ul class="sub-header-ul depth-2">
                     <li class="sub-header-li"><a href="#none">스파</a></li>
@@ -94,25 +101,25 @@
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li class="li-aobut">
                   <a href="#none">ABOUT 설화수</a>
                   <!-- about 설화수 -->
                   <div class="header-about">
-                    <ul class="depth-2">
-                      <li class="sub-header-li">
+                    <ul class="ul-about">
+                      <li>
                         <strong><a href="#none">브랜드 스토리</a></strong>
                       </li>
-                      <li class="sub-header-li"><a href="#none">브랜드 빌리프</a></li>
-                      <li class="sub-header-li"><a href="#none">브랜드 캠페인</a></li>
-                      <li class="sub-header-li"><a href="#none">브랜드 지속가능성</a></li>
-                      <li class="sub-header-li"><a href="#none">브랜드 뉴스</a></li>
+                      <li><a href="#none">브랜드 빌리프</a></li>
+                      <li><a href="#none">브랜드 캠페인</a></li>
+                      <li><a href="#none">브랜드 지속가능성</a></li>
+                      <li><a href="#none">브랜드 뉴스</a></li>
                     </ul>
-                    <ul>
+                    <ul class="ul-about">
                       <li>
                         <strong><a href="#none">브랜드 앰버서더</a></strong>
                       </li>
                     </ul>
-                    <ul>
+                    <ul class="ul-about">
                       <li>
                         <strong><a href="#none">로제</a></strong>
                       </li>
@@ -123,13 +130,13 @@
                         <a href="#none">PART 2 ROSÉ IN BUKCHON</a>
                       </li>
                     </ul>
-                    <ul>
+                    <ul class="ul-about">
                       <li>
                         <strong><a href="#none">ART</a></strong>
                       </li>
                       <li><a href="#none">설화 문화전</a></li>
                     </ul>
-                    <ul>
+                    <ul class="ul-about">
                       <li>
                         <strong><a href="#none">HERITAGE</a></strong>
                       </li>
@@ -352,7 +359,7 @@
 
       <script>
         // swiper slide
-        var swiper = new Swiper(".mySwiper", {
+        var mySwiper = new Swiper(".mySwiper", {
           spaceBetween: 30,
           centeredSlides: true,
           effect: "fade",
@@ -368,6 +375,22 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
+        });
+
+        $(document).ready(function () {
+          mySwiper.on("slideChange", function () {
+            $(".swiper-slide").removeClass("fadeup-ani"); // Remove fadeup-ani class from all slides
+            var activeSlide = mySwiper.slides[mySwiper.activeIndex]; // Get the active slide
+            $(activeSlide).children().addClass("fadeup-ani"); // Add fadeup-ani class to children of active slide
+
+            console.log($(activeSlide).children().next());
+          });
+
+          // Initial setup for the first slide
+          var initialSlide = mySwiper.slides[mySwiper.activeIndex];
+          $(initialSlide).children().addClass("fadeup-ani");
+
+          console.log($(initialSlide).children().next());
         });
 
         // swiper slide recommend
@@ -390,5 +413,6 @@
         });
       </script>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
